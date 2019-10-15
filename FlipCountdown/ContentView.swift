@@ -20,9 +20,23 @@ struct ContentView: View {
 
 struct FlipView: View {
 
+    @State var animateTop: Bool = false
+    @State var animateBottom: Bool = false
+
     var body: some View {
         HStack(alignment: .center) {
-            SingleFlipView()
+            SingleFlipView(animateTop: $animateTop, animateBottom: $animateBottom)
+            Button(action: {
+                withAnimation(.easeIn(duration: 0.5)) {
+                    self.animateTop.toggle()
+                }
+
+                withAnimation(Animation.easeOut(duration: 0.5).delay(0.5)) {
+                    self.animateBottom.toggle()
+                }
+            }) {
+                Text("Tap on me")
+            }
         }
     }
 
@@ -30,8 +44,13 @@ struct FlipView: View {
 
 struct SingleFlipView: View {
 
-    @State var changeTop: Bool = false
-    @State var changeBottom: Bool = true
+    init(animateTop: Binding<Bool>, animateBottom: Binding<Bool>) {
+        self._animateTop = animateTop
+        self._animateBottom = animateBottom
+    }
+
+    @Binding var animateTop: Bool
+    @Binding var animateBottom: Bool
 
     var body: some View {
         VStack(spacing: 0) {
@@ -43,11 +62,6 @@ struct SingleFlipView: View {
                     .padding([.top, .leading, .trailing], 5)
                     .clipped()
                     .background(Color.red)
-                    .onTapGesture {
-                        withAnimation(.default) {
-                            self.changeTop.toggle()
-                        }
-                    }
                 Text("2")
                     .font(.system(size: 40))
                     .fontWeight(.heavy)
@@ -55,12 +69,7 @@ struct SingleFlipView: View {
                     .padding([.top, .leading, .trailing], 5)
                     .clipped()
                     .background(Color.red)
-                    .rotation3DEffect(.init(degrees: changeTop ? -90 : 0), axis: (1, 0, 0), anchor: .bottom, perspective: 0.5)
-                    .onTapGesture {
-                        withAnimation(.default) {
-                            self.changeTop.toggle()
-                        }
-                    }
+                    .rotation3DEffect(.init(degrees: animateTop ? -90 : 0), axis: (1, 0, 0), anchor: .bottom, perspective: 0.5)
             }
             ZStack {
                 Text("2")
@@ -68,12 +77,8 @@ struct SingleFlipView: View {
                     .fontWeight(.heavy)
                     .padding(.top, -24)
                     .padding([.bottom, .leading, .trailing], 5)
+                    .clipped()
                     .background(Color.green)
-                    .onTapGesture {
-                        withAnimation(.default) {
-                            self.changeBottom.toggle()
-                        }
-                    }
                 Text("1")
                     .font(.system(size: 40))
                     .fontWeight(.heavy)
@@ -81,12 +86,7 @@ struct SingleFlipView: View {
                     .padding([.bottom, .leading, .trailing], 5)
                     .clipped()
                     .background(Color.green)
-                    .rotation3DEffect(.init(degrees: changeBottom ? 90 : 0), axis: (1, 0, 0), anchor: .top, perspective: 0.5)
-                    .onTapGesture {
-                        withAnimation(.default) {
-                            self.changeBottom.toggle()
-                        }
-                    }
+                    .rotation3DEffect(.init(degrees: animateBottom ? 0 : 90), axis: (1, 0, 0), anchor: .top, perspective: 0.5)
             }
         }
     }
