@@ -23,17 +23,13 @@ struct FlipView: View {
     @State var animateTop: Bool = false
     @State var animateBottom: Bool = false
 
+    let viewModel = SingleFlipViewModel()
+
     var body: some View {
         HStack(alignment: .center) {
-            SingleFlipView(animateTop: $animateTop, animateBottom: $animateBottom)
+            SingleFlipView(viewModel: viewModel)
             Button(action: {
-                withAnimation(.easeIn(duration: 0.5)) {
-                    self.animateTop.toggle()
-                }
-
-                withAnimation(Animation.easeOut(duration: 0.5).delay(0.5)) {
-                    self.animateBottom.toggle()
-                }
+                self.viewModel.text = "2"
             }) {
                 Text("Tap on me")
             }
@@ -42,15 +38,42 @@ struct FlipView: View {
 
 }
 
-struct SingleFlipView: View {
+import Combine
 
-    init(animateTop: Binding<Bool>, animateBottom: Binding<Bool>) {
-        self._animateTop = animateTop
-        self._animateBottom = animateBottom
+class SingleFlipViewModel: ObservableObject {
+
+    @Published var text: String? {
+        didSet {
+            previousTextValue = oldValue
+            animate()
+        }
     }
 
-    @Binding var animateTop: Bool
-    @Binding var animateBottom: Bool
+    @Published var previousTextValue: String?
+    @Published var animateTop: Bool = false
+    @Published var animateBottom: Bool = false
+
+    // MARK: - Private
+
+    private func animate() {
+        withAnimation(.easeIn(duration: 0.5)) { [weak self] in
+            self?.animateTop.toggle()
+        }
+
+        withAnimation(Animation.easeOut(duration: 0.5).delay(0.5)) { [weak self] in
+            self?.animateBottom.toggle()
+        }
+    }
+
+}
+
+struct SingleFlipView: View {
+
+    init(viewModel: SingleFlipViewModel) {
+        self.viewModel = viewModel
+    }
+
+    @ObservedObject var viewModel: SingleFlipViewModel
 
     var body: some View {
         VStack(spacing: 0) {
@@ -69,7 +92,7 @@ struct SingleFlipView: View {
                     .padding([.top, .leading, .trailing], 5)
                     .clipped()
                     .background(Color.red)
-                    .rotation3DEffect(.init(degrees: animateTop ? -90 : 0), axis: (1, 0, 0), anchor: .bottom, perspective: 0.5)
+                    .rotation3DEffect(.init(degrees: viewModel.animateTop ? -90 : 0), axis: (1, 0, 0), anchor: .bottom, perspective: 0.5)
             }
             ZStack {
                 Text("2")
@@ -86,7 +109,7 @@ struct SingleFlipView: View {
                     .padding([.bottom, .leading, .trailing], 5)
                     .clipped()
                     .background(Color.green)
-                    .rotation3DEffect(.init(degrees: animateBottom ? 0 : 90), axis: (1, 0, 0), anchor: .top, perspective: 0.5)
+                    .rotation3DEffect(.init(degrees: viewModel.animateBottom ? 0 : 90), axis: (1, 0, 0), anchor: .top, perspective: 0.5)
             }
         }
     }
