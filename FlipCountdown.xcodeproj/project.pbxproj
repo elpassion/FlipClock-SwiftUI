@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47DEBEBB2358F8C4004E2BCA /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEBA2358F8C4004E2BCA /* ClockViewModel.swift */; };
+		47DEBEBD2358F902004E2BCA /* DateFormatter+TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEBC2358F902004E2BCA /* DateFormatter+TimeFormatter.swift */; };
+		47DEBEBF2358F91E004E2BCA /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEBE2358F91E004E2BCA /* ClockView.swift */; };
+		47DEBEC12358F93C004E2BCA /* FlipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEC02358F93C004E2BCA /* FlipViewModel.swift */; };
+		47DEBEC32358F96A004E2BCA /* SingleFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEC22358F96A004E2BCA /* SingleFlipView.swift */; };
+		47DEBEC52358F9B2004E2BCA /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEC42358F9B2004E2BCA /* Color+Colors.swift */; };
+		47DEBEC72358F9D5004E2BCA /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DEBEC62358F9D5004E2BCA /* FlipView.swift */; };
 		47F96E432354F3480036311F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F96E422354F3480036311F /* AppDelegate.swift */; };
 		47F96E452354F3480036311F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F96E442354F3480036311F /* SceneDelegate.swift */; };
 		47F96E472354F3480036311F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F96E462354F3480036311F /* ContentView.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47DEBEBA2358F8C4004E2BCA /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
+		47DEBEBC2358F902004E2BCA /* DateFormatter+TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+TimeFormatter.swift"; sourceTree = "<group>"; };
+		47DEBEBE2358F91E004E2BCA /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		47DEBEC02358F93C004E2BCA /* FlipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipViewModel.swift; sourceTree = "<group>"; };
+		47DEBEC22358F96A004E2BCA /* SingleFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFlipView.swift; sourceTree = "<group>"; };
+		47DEBEC42358F9B2004E2BCA /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
+		47DEBEC62358F9D5004E2BCA /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
 		47F96E3F2354F3480036311F /* FlipCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F96E422354F3480036311F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F96E442354F3480036311F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47DEBEC82358FA1A004E2BCA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				47F96E422354F3480036311F /* AppDelegate.swift */,
+				47F96E442354F3480036311F /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		47DEBEC92358FA3C004E2BCA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				47F96E482354F3490036311F /* Assets.xcassets */,
+				47F96E502354F3490036311F /* Info.plist */,
+				47F96E4D2354F3490036311F /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		47DEBECA2358FA4F004E2BCA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47DEBEBE2358F91E004E2BCA /* ClockView.swift */,
+				47F96E462354F3480036311F /* ContentView.swift */,
+				47DEBEC62358F9D5004E2BCA /* FlipView.swift */,
+				47DEBEC22358F96A004E2BCA /* SingleFlipView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47DEBECB2358FA55004E2BCA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				47DEBEBA2358F8C4004E2BCA /* ClockViewModel.swift */,
+				47DEBEC02358F93C004E2BCA /* FlipViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		47DEBECC2358FA5A004E2BCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				47DEBEC42358F9B2004E2BCA /* Color+Colors.swift */,
+				47DEBEBC2358F902004E2BCA /* DateFormatter+TimeFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		47F96E362354F3480036311F = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +118,12 @@
 		47F96E412354F3480036311F /* FlipCountdown */ = {
 			isa = PBXGroup;
 			children = (
-				47F96E422354F3480036311F /* AppDelegate.swift */,
-				47F96E442354F3480036311F /* SceneDelegate.swift */,
-				47F96E462354F3480036311F /* ContentView.swift */,
-				47F96E482354F3490036311F /* Assets.xcassets */,
-				47F96E4D2354F3490036311F /* LaunchScreen.storyboard */,
-				47F96E502354F3490036311F /* Info.plist */,
+				47DEBEC82358FA1A004E2BCA /* Application */,
+				47DEBECC2358FA5A004E2BCA /* Extensions */,
 				47F96E4A2354F3490036311F /* Preview Content */,
+				47DEBEC92358FA3C004E2BCA /* SupportingFiles */,
+				47DEBECB2358FA55004E2BCA /* ViewModels */,
+				47DEBECA2358FA4F004E2BCA /* Views */,
 			);
 			path = FlipCountdown;
 			sourceTree = "<group>";
@@ -147,8 +208,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				47F96E432354F3480036311F /* AppDelegate.swift in Sources */,
+				47DEBEBF2358F91E004E2BCA /* ClockView.swift in Sources */,
 				47F96E452354F3480036311F /* SceneDelegate.swift in Sources */,
+				47DEBEC52358F9B2004E2BCA /* Color+Colors.swift in Sources */,
 				47F96E472354F3480036311F /* ContentView.swift in Sources */,
+				47DEBEC72358F9D5004E2BCA /* FlipView.swift in Sources */,
+				47DEBEC12358F93C004E2BCA /* FlipViewModel.swift in Sources */,
+				47DEBEBB2358F8C4004E2BCA /* ClockViewModel.swift in Sources */,
+				47DEBEBD2358F902004E2BCA /* DateFormatter+TimeFormatter.swift in Sources */,
+				47DEBEC32358F96A004E2BCA /* SingleFlipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +229,7 @@
 				47F96E4E2354F3490036311F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,7 +357,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FlipCountdown/Preview Content\"";
 				DEVELOPMENT_TEAM = XRT2TCPYP7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FlipCountdown/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlipCountdown/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +377,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FlipCountdown/Preview Content\"";
 				DEVELOPMENT_TEAM = XRT2TCPYP7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FlipCountdown/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlipCountdown/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
