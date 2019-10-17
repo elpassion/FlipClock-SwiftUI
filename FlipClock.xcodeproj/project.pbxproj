@@ -30,7 +30,7 @@
 		47DEBEC22358F96A004E2BCA /* SingleFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFlipView.swift; sourceTree = "<group>"; };
 		47DEBEC42358F9B2004E2BCA /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
 		47DEBEC62358F9D5004E2BCA /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
-		47F96E3F2354F3480036311F /* FlipCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47F96E3F2354F3480036311F /* FlipClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F96E422354F3480036311F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F96E442354F3480036311F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47F96E462354F3480036311F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		47F96E362354F3480036311F = {
 			isa = PBXGroup;
 			children = (
-				47F96E412354F3480036311F /* FlipCountdown */,
+				47F96E412354F3480036311F /* FlipClock */,
 				47F96E402354F3480036311F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,12 +110,12 @@
 		47F96E402354F3480036311F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47F96E3F2354F3480036311F /* FlipCountdown.app */,
+				47F96E3F2354F3480036311F /* FlipClock.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		47F96E412354F3480036311F /* FlipCountdown */ = {
+		47F96E412354F3480036311F /* FlipClock */ = {
 			isa = PBXGroup;
 			children = (
 				47DEBEC82358FA1A004E2BCA /* Application */,
@@ -125,7 +125,7 @@
 				47DEBECB2358FA55004E2BCA /* ViewModels */,
 				47DEBECA2358FA4F004E2BCA /* Views */,
 			);
-			path = FlipCountdown;
+			path = FlipClock;
 			sourceTree = "<group>";
 		};
 		47F96E4A2354F3490036311F /* Preview Content */ = {
@@ -139,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47F96E3E2354F3480036311F /* FlipCountdown */ = {
+		47F96E3E2354F3480036311F /* FlipClock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47F96E532354F3490036311F /* Build configuration list for PBXNativeTarget "FlipCountdown" */;
+			buildConfigurationList = 47F96E532354F3490036311F /* Build configuration list for PBXNativeTarget "FlipClock" */;
 			buildPhases = (
 				47F96E3B2354F3480036311F /* Sources */,
 				47F96E3C2354F3480036311F /* Frameworks */,
@@ -151,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = FlipCountdown;
+			name = FlipClock;
 			productName = FlipCountdown;
-			productReference = 47F96E3F2354F3480036311F /* FlipCountdown.app */;
+			productReference = 47F96E3F2354F3480036311F /* FlipClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 47F96E3A2354F3480036311F /* Build configuration list for PBXProject "FlipCountdown" */;
+			buildConfigurationList = 47F96E3A2354F3480036311F /* Build configuration list for PBXProject "FlipClock" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -184,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47F96E3E2354F3480036311F /* FlipCountdown */,
+				47F96E3E2354F3480036311F /* FlipClock */,
 			);
 		};
 /* End PBXProject section */
@@ -354,15 +354,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FlipCountdown/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FlipClock/Preview Content\"";
 				DEVELOPMENT_TEAM = XRT2TCPYP7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FlipCountdown/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FlipClock/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mg.FlipCountdown;
+				PRODUCT_BUNDLE_IDENTIFIER = mg.FlipClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,15 +374,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"FlipCountdown/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FlipClock/Preview Content\"";
 				DEVELOPMENT_TEAM = XRT2TCPYP7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/FlipCountdown/SupportingFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FlipClock/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mg.FlipCountdown;
+				PRODUCT_BUNDLE_IDENTIFIER = mg.FlipClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,7 +392,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47F96E3A2354F3480036311F /* Build configuration list for PBXProject "FlipCountdown" */ = {
+		47F96E3A2354F3480036311F /* Build configuration list for PBXProject "FlipClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47F96E512354F3490036311F /* Debug */,
@@ -401,7 +401,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47F96E532354F3490036311F /* Build configuration list for PBXNativeTarget "FlipCountdown" */ = {
+		47F96E532354F3490036311F /* Build configuration list for PBXNativeTarget "FlipClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47F96E542354F3490036311F /* Debug */,
