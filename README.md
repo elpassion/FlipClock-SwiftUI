@@ -8,3 +8,9 @@ Flip clock is Simple app written in SwiftUI. The App displays current time with 
 |Light|Dark|
 |:-:|:-:|
 |![Light_preview](Gifs/flip_clock_light.gif)|![Dark_preview](Gifs/flip_clock_dark.gif)|
+
+## License
+
+Copyright © 2019 [EL Passion](https://www.elpassion.com)
+
+License: [GNU GPLv3](LICENSE)
