@@ -19,7 +19,7 @@ struct FlipView: View {
                                       perspective: 0.5)
             }
             Color.separator
-                .frame(width: 35, height: 1)
+                .frame(height: 1)
             ZStack {
                 SingleFlipView(text: viewModel.oldValue ?? "", type: .bottom)
                 SingleFlipView(text: viewModel.newValue ?? "", type: .bottom)
@@ -29,6 +29,7 @@ struct FlipView: View {
                                       perspective: 0.5)
             }
         }
+            .fixedSize()
     }
 
 }

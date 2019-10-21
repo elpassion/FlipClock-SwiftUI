@@ -7,9 +7,7 @@ class ClockViewModel {
         setupTimer()
     }
 
-    private(set) lazy var flipViewModels: [FlipViewModel] = {
-        (0...5).map { _ in FlipViewModel() }
-    }()
+    private(set) lazy var flipViewModels = { (0...5).map { _ in FlipViewModel() } }()
 
     // MARK: - Private
 

@@ -24,8 +24,8 @@ class FlipViewModel: ObservableObject, Identifiable {
             self?.animateTop = true
         }
 
-        withAnimation(Animation.easeOut(duration: 0.2).delay(0.2)) {
-            self.animateBottom = true
+        withAnimation(Animation.easeOut(duration: 0.2).delay(0.2)) { [weak self] in
+            self?.animateBottom = true
         }
     }
 
